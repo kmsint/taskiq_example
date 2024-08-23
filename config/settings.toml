@@ -1,0 +1,16 @@
+[default]
+
+    [default.logs]
+        LEVEL_NAME = "DEBUG"
+        FORMAT = '[%(asctime)s] #%(levelname)-8s %(filename)s:%(lineno)d - %(name)s - %(message)s'
+
+    [default.bot]
+        PARSE_MODE = 'HTML'
+    
+    [default.redis]
+        HOST = 'localhost'
+        PORT = 6379
+        DATABASE = 1
+    
+    [default.nats]
+        SERVERS = 'nats://localhost:4222'

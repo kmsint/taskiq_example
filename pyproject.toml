@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "taskiq-example"
+version = "0.1.0"
+description = ""
+authors = ["kmsint <kmsrus@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+aiogram = "^3.12.0"
+dynaconf = "^3.2.6"
+taskiq = "^0.11.7"
+taskiq-redis = "^1.0.0"
+taskiq-nats = "^0.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,23 @@
+services:
+
+  redis:
+    image: redis:latest
+    command:
+      - redis-server
+    env_file:
+      - .env
+    restart: on-failure
+    ports:
+      - "6379:6379"
+
+  nats:
+    image: nats:latest
+    restart: on-failure
+    entrypoint: /nats-server
+    command: "-c /config/server.conf"
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    volumes:
+      - ./nats/data:/data
+      - ./nats/config/server.conf:/config/server.conf
